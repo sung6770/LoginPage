@@ -1,6 +1,6 @@
 function checkEmail() {
     let email = document.getElementById('input-email');
-    let regExp =/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    let regExp = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     let informWrongEmail = document.getElementById('wrong-email');
 
     if ((email.value).match(regExp) == null) {
@@ -9,14 +9,13 @@ function checkEmail() {
         return true;
     }
     else informWrongEmail.textContent = '';
-
 }
 
-function checkPassword(){
+function checkPassword() {
     let inputPassword = document.getElementById('input-password').value;
     let checkPassword = document.getElementById('check-password');
     let informWrongPassword = document.getElementById('wrong-password')
-    if(inputPassword != checkPassword.value){
+    if (inputPassword != checkPassword.value) {
         informWrongPassword.textContent = '비밀번호가 일치하지 않습니다!';
         checkPassword.value = null;
     }
@@ -55,19 +54,19 @@ function checkMajor() {
     }
 }
 
-function insertHyphen(){
+function insertHyphen() {
     let phoneNumber = document.getElementById('phone-number');
     let informWrongphonenumber = document.getElementById('wrong-phonenumber');
-    if(phoneNumber.value.length != 11) informWrongphonenumber.textContent= '잘못된 전화번호입니다!';
-    else{
-        phoneNumber.value = phoneNumber.value.slice(0,3) + '-' + phoneNumber.value.slice(3,7) + '-' + phoneNumber.value.slice(7,11);
-        informWrongphonenumber.textContent= '';
+    if (phoneNumber.value.length != 11) informWrongphonenumber.textContent = '잘못된 전화번호입니다!';
+    else {
+        phoneNumber.value = phoneNumber.value.slice(0, 3) + '-' + phoneNumber.value.slice(3, 7) + '-' + phoneNumber.value.slice(7, 11);
+        informWrongphonenumber.textContent = '';
     }
 }
 
 let closebtn = document.getElementById('btn-close');
 closebtn.addEventListener('click', gotoLoginPage);
 
-function gotoLoginPage(){
-    window.location.href='file:///C:/Users/user/Desktop/BCSD/LoginPage/login_page.html';
+function gotoLoginPage() {
+    window.location.href = 'file:///C:/Users/user/Desktop/BCSD/LoginPage/login_page.html';
 }
