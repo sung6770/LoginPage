@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    height: 100vh;
+}
+
+.navigation-bar{
+    position: absolute;
+    top: 0px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mb-3{
+    width: 300px;
+}
+
+.wMessage{
+    font-size: smaller;
+    color:dimgrey;
+}
