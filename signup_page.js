@@ -39,7 +39,6 @@ studentNumber.addEventListener('change', checkMajor);
 function checkMajor() {
     let number = studentNumber.value;
     let major = document.getElementById('major');
-    let informWrongStudentNumber = document.getElementById('wrong-studentnumber');
     if (number.slice(4, 7) == 136) major.value = '컴퓨터공학부'
     else if (number.slice(4, 7) == 120) major.value = '기계공학부'
     else if (number.slice(4, 7) == 140) major.value = '메카트로닉스공학부'
@@ -68,5 +67,5 @@ let closebtn = document.getElementById('btn-close');
 closebtn.addEventListener('click', gotoLoginPage);
 
 function gotoLoginPage() {
-    window.location.href = 'file:///C:/Users/user/Desktop/BCSD/LoginPage/login_page.html';
+    window.location.href = 'login_page.html';
 }
